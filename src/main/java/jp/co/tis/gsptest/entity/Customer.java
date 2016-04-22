@@ -39,7 +39,7 @@ public class Customer implements Serializable {
      * @return CUSTOMER_ID
      */
     @Id
-    @GeneratedValue(generator = "generator", strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "CUSTOMER_ID", precision = 19, nullable = false, unique = true)
     public Long getCustomerId() {
         return customerId;

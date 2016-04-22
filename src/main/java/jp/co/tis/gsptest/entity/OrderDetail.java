@@ -48,7 +48,7 @@ public class OrderDetail implements Serializable {
      * @return DETAIL_ID
      */
     @Id
-    @GeneratedValue(generator = "generator", strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "DETAIL_ID", precision = 19, nullable = false, unique = true)
     public Long getDetailId() {
         return detailId;
@@ -67,7 +67,7 @@ public class OrderDetail implements Serializable {
      *
      * @return ORDER_ID
      */
-    @Column(name = "ORDER_ID", precision = 19, nullable = false, unique = false)
+    @Column(name = "ORDER_ID", precision = 19, nullable = false, unique = false, insertable = false, updatable = false)
     public Long getOrderId() {
         return orderId;
     }
@@ -85,7 +85,7 @@ public class OrderDetail implements Serializable {
      *
      * @return PRODUCT_ID
      */
-    @Column(name = "PRODUCT_ID", precision = 19, nullable = true, unique = false)
+    @Column(name = "PRODUCT_ID", precision = 19, nullable = true, unique = false, insertable = false, updatable = false)
     public Long getProductId() {
         return productId;
     }

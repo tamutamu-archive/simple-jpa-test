@@ -47,7 +47,7 @@ public class TestOrder implements Serializable {
      * @return ORDER_ID
      */
     @Id
-    @GeneratedValue(generator = "generator", strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ORDER_ID", precision = 19, nullable = false, unique = true)
     public Long getOrderId() {
         return orderId;
@@ -66,7 +66,7 @@ public class TestOrder implements Serializable {
      *
      * @return CUSTOMER_ID
      */
-    @Column(name = "CUSTOMER_ID", precision = 19, nullable = true, unique = false)
+    @Column(name = "CUSTOMER_ID", precision = 19, nullable = true, unique = false, insertable = false, updatable = false)
     public Long getCustomerId() {
         return customerId;
     }

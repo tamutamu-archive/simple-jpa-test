@@ -36,7 +36,7 @@ public class Product implements Serializable {
      * @return PRODUCT_ID
      */
     @Id
-    @GeneratedValue(generator = "generator", strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "PRODUCT_ID", precision = 19, nullable = false, unique = true)
     public Long getProductId() {
         return productId;
