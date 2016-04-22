@@ -84,7 +84,7 @@ public class TestOrder implements Serializable {
      *
      * @return ORDER_DATE
      */
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.DATE)
     @Column(name = "ORDER_DATE", nullable = true, unique = false)
     public Date getOrderDate() {
         return orderDate;

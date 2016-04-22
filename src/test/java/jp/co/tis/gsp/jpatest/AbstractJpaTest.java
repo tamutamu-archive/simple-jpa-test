@@ -23,6 +23,8 @@ public abstract class AbstractJpaTest {
 		// invokerプラグインでキック
 		// surefireプラグインで「GSP_DB」をセット
 		String db = System.getProperty("GSP_DB");
+		
+		db = "h2";
 
 		entityManagerFactory = Persistence.createEntityManagerFactory("persistence-" + db);
 		entityManager = entityManagerFactory.createEntityManager();
